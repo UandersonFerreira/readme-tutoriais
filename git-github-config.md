@@ -138,6 +138,7 @@ git config --list
 ```
 
 ### Criando um novo repositório pela linha de comando utilizando a chave SSH
+```shell
 echo "# readme-tutoriais" >> README.md
 git init
 git add README.md
@@ -145,13 +146,14 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin **chave-ssh-do-repositório-criado**
 git push -u origin main
-
+```
 # Enviando um repositório existente a partir da linha de comando utilizando a chave SSH
 
+```shell
 git remote add origin **chave-ssh-do-repositório-criado**
 git branch -M main
 git push -u origin main
-
+```
 ###  Comandos git
 
 **`git init`**: Inicialize um repositório Git em um diretório.
