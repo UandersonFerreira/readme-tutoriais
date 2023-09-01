@@ -154,6 +154,7 @@ git remote add origin **chave-ssh-do-repositório-criado**
 git branch -M main
 git push -u origin main
 ```
+
 ###  Comandos git
 
 **`git init`**: Inicialize um repositório Git em um diretório.
@@ -257,3 +258,38 @@ git push -u origin main
     
 
 Consultando a documentação do Git (`git --help` ou `git [comando] --help`) para obter informações detalhadas sobre cada comando e suas opções.
+
+### Ciclo de vida de arquivos 
+
+Status
+
+Os status são situações (num grosso modo) que os arquivos se encontram. Esses status são:
+
+    Untracked - O arquivo acabou de ser adicionado mas ainda não foi visto pelo Git
+
+    Unmodifier - Quando o arquivo foi visto pelo git mas não foi modificado.
+
+    Modified - O arquivo foi modificado.
+
+    Staged - Área onde será criada a versão.
+
+![Alt text](/.github/img/image.png)
+
+Como vemos na imagem, existem regras que levam um arquivo de um status para outro. Seguindo o fluxo podemos definir como sendo:
+
+    Untracked -> Unmodified
+    Quando adicionamos um arquivo e ele é visto pelo Git e não tem modificações, ele passa a ter o status de unmodified.
+
+    Unmodified -> Modified
+    Quando qualquer alteração no arquivo é executada.
+
+    Modified -> Staged
+    Quando a modificação é salva no Git. Neste momento ela ainda não foi efetivada.
+
+    Staged -> Unmodified
+    Essa alteração se dá quando realizamos um commit, aqui um código hash da modificação é gerada e nosso arquivo está apto a receber novas mudanças do código para um novo commit.
+
+    Unmodified -> Untracked
+    Quando removemos um arquivo.
+
+  (referência: https://dev.to/lazarocontato/git-um-breve-estudo-9gl)
