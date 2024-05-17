@@ -157,104 +157,232 @@ git push -u origin main
 
 ###  Comandos git
 
-**`git init`**: Inicialize um repositório Git em um diretório.
-- `git init`
+# Comandos Git
 
-**`git clone`**: Clone um repositório Git existente para o seu computador.
-   
--   `git clone https://github.com/seu-usuario/seu-repositorio.git` 
-    
-  **`git status`**: Verifique o status atual do seu repositório.
-    
-    
--   `git status` 
-    
-  **`git add`**: Adicione arquivos ou alterações específicas ao próximo commit.
-    
-    
--   `git add nome-do-arquivo` 
-    
- **`git commit`**: Crie um novo commit com as alterações adicionadas.
-    
-    
--   `git commit -m "Mensagem do commit"` 
-    
-**`git pull`**: Atualize seu repositório local com as alterações do repositório remoto.
-    
-    
--   `git pull origin nome-da-branch` 
-    
-   **`git push`**: Envie suas alterações para o repositório remoto.
-    
-    
--   `git push origin nome-da-branch` 
-    
-   **`git log`**: Exiba o histórico de commits do seu repositório.
-   
-    
--   `git log` 
-    
-  **`git diff`**: Mostre as diferenças entre o seu diretório de trabalho atual e a última versão commitada.
-       
--   `git diff` 
-    
-  **`git branch`**: Liste todas as branches no seu repositório.
-    
-    
--   `git branch` 
-    
-   **`git checkout`**: Mude para uma branch específica.
-    
-    
--   `git checkout nome-da-branch` 
-    
-   **`git merge`**: Mescle alterações de uma branch para outra.
-    
--   `git merge nome-da-outra-branch` 
-    
-  **`git stash`**: Guarde temporariamente as alterações não comprometidas.
-    
-    
--   `git stash` 
-    
-   **`git remote`**: Mostre os repositórios remotos configurados no seu projeto.
-    
-    
--   `git remote -v` 
-    
-  **`git fetch`**: Baixe as últimas alterações do repositório remoto.
-   
-    
--   `git fetch origin` 
-    
-  **`git rebase`**: Reorganize os commits.
-    
-    
--   `git rebase nome-da-branch` 
-    
-  **`git cherry-pick`**: Aplique um commit específico de uma branch para outra.
-    
-    
--   `git cherry-pick hash-do-commit` 
-    
-   **`git reset`**: Desfaça commits anteriores ou redefina o estado do seu repositório.
-    
-    
--   `git reset HEAD~1` 
-    
-  **`git tag`**: Crie tags para marcar versões específicas do seu código.
-    
-    
--   `git tag v1.0.0` 
-    
-   **`git clean`**: Remova arquivos não rastreados do seu diretório de trabalho
-    
--   `git clean -f` 
-    
-   **Aliases do Git**: Configure alias personalizados para comandos Git frequentemente usados para economizar tempo.
+## `git init`
+Inicialize um repositório Git em um diretório. 
+
+```sh
+git init
+```
+**Exemplo de uso:** Você está começando um novo projeto e deseja rastrear as alterações de código usando o Git.
+
+---
+
+## `git clone`
+Clone um repositório Git existente para o seu computador.
+
+```sh
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+**Exemplo de uso:** Você quer trabalhar em um projeto que já está no GitHub.
+
+---
+
+## `git status`
+Verifique o status atual do seu repositório.
+
+```sh
+git status
+```
+**Exemplo de uso:** Antes de fazer um commit, você quer ver quais arquivos foram modificados ou adicionados.
+
+---
+
+## `git add`
+Adicione arquivos ou alterações específicas ao próximo commit.
+
+```sh
+git add nome-do-arquivo
+git add .
+```
+**Exemplo de uso:** Você fez alterações em alguns arquivos e está pronto para adicioná-los ao próximo commit. O segundo comando (`git add .`) adiciona todas as mudanças.
+
+---
+
+## `git commit`
+Crie um novo commit com as alterações adicionadas.
+
+```sh
+git commit -m "Mensagem do commit"
+```
+**Exemplo de uso:** Você adicionou suas mudanças e agora quer criar um snapshot dessas mudanças com uma mensagem descritiva.
+
+---
+
+## `git pull`
+Atualize seu repositório local com as alterações do repositório remoto.
+
+```sh
+git pull origin nome-da-branch
+```
+**Exemplo de uso:** Você quer garantir que tem as últimas alterações do repositório remoto antes de começar a trabalhar.
+
+---
+
+## `git push`
+Envie suas alterações para o repositório remoto.
+
+```sh
+git push origin nome-da-branch
+```
+**Exemplo de uso:** Você terminou de trabalhar em uma feature e quer enviar suas mudanças para o repositório remoto.
+
+---
+
+## `git log`
+Exiba o histórico de commits do seu repositório.
+
+```sh
+git log
+git log --oneline --graph --decorate --all
+```
+**Exemplo de uso:** Você quer ver a lista de commits para entender a história do projeto. O segundo comando fornece uma visualização mais amigável.
+
+---
+
+## `git diff`
+Mostre as diferenças entre o seu diretório de trabalho atual e a última versão commitada.
+
+```sh
+git diff
+git diff nome-do-arquivo
+```
+**Exemplo de uso:** Você quer ver o que mudou em um arquivo específico antes de adicioná-lo ao commit.
+
+---
+
+## `git branch`
+Liste todas as branches no seu repositório.
+
+```sh
+git branch
+git branch -a
+```
+**Exemplo de uso:** Você quer ver todas as branches locais e remotas.
+
+---
+
+## `git checkout`
+Mude para uma branch específica.
+
+```sh
+git checkout nome-da-branch
+git checkout -b nova-branch
+```
+**Exemplo de uso:** Você quer começar a trabalhar em uma nova feature em uma branch separada. O segundo comando cria e muda para uma nova branch.
+
+---
+
+## `git merge`
+Mescle alterações de uma branch para outra.
+
+```sh
+git merge nome-da-outra-branch
+```
+**Exemplo de uso:** Você terminou de desenvolver uma feature em uma branch separada e quer mesclar as mudanças de volta para a branch principal.
+
+---
+
+## `git stash`
+Guarde temporariamente as alterações não comprometidas.
+
+```sh
+git stash
+git checkout outra-branch # muda de branch e faz o que precisa
+git checkout branch-de-trabalho # volta para a branch
+git stash pop #aplica as mudanças guardadas.
 
 
-  `git config --global alias.co checkout` 
+```
+**Exemplo de uso:** Você precisa mudar de branch rapidamente e não quer comprometer suas alterações ainda. `git stash pop` aplica as mudanças guardadas.
+
+---
+
+## `git remote`
+Mostre os repositórios remotos configurados no seu projeto.
+
+```sh
+git remote -v
+```
+**Exemplo de uso:** Você quer verificar quais repositórios remotos estão configurados.
+
+---
+
+## `git fetch`
+Baixe as últimas alterações do repositório remoto.
+
+```sh
+git fetch origin
+```
+**Exemplo de uso:** Você quer ver as mudanças no repositório remoto sem integrá-las imediatamente na sua branch atual.
+
+---
+
+## `git rebase`
+Reorganize os commits.
+
+```sh
+git rebase nome-da-branch
+```
+**Exemplo de uso:** Você quer aplicar suas mudanças em cima das últimas mudanças de outra branch, criando uma história linear.
+
+---
+
+## `git cherry-pick`
+Aplique um commit específico de uma branch para outra.
+
+```sh
+git cherry-pick hash-do-commit
+```
+**Exemplo de uso:** Você quer aplicar uma correção específica de uma branch para outra sem mesclar tudo.
+
+---
+
+## `git reset`
+Desfaça commits anteriores ou redefina o estado do seu repositório.
+
+```sh
+git reset HEAD~1
+git reset --hard HEAD~1
+git reset --soft HEAD~1
+```
+**Exemplo de uso:** O primeiro comando desfaz o último commit mantendo as mudanças no diretório de trabalho. O segundo desfaz o commit e as mudanças. O terceiro desfaz o commit mas mantém as mudanças para serem commitadas novamente.
+
+---
+
+## `git tag`
+Crie tags para marcar versões específicas do seu código.
+
+```sh
+git tag v1.0.0
+git tag -a v1.0.0 -m "Versão 1.0.0"
+```
+**Exemplo de uso:** Você quer marcar um ponto específico no histórico do seu projeto, como um lançamento de versão.
+
+---
+
+## `git clean`
+Remova arquivos não rastreados do seu diretório de trabalho.
+
+```sh
+git clean -f
+git clean -fd
+```
+**Exemplo de uso:** Você quer remover arquivos e diretórios não rastreados para limpar seu diretório de trabalho.
+
+---
+
+## Aliases do Git
+Configure alias personalizados para comandos Git frequentemente usados para economizar tempo.
+
+```sh
+git config --global alias.co checkout
+git config --global alias.st status
+git config --global alias.ci commit
+```
+**Exemplo de uso:** Facilita o uso de comandos frequentemente usados com nomes mais curtos. Assim, ao invés de digitar git checkout, você pode simplesmente digitar git co
+
     
 
 Consultando a documentação do Git (`git --help` ou `git [comando] --help`) para obter informações detalhadas sobre cada comando e suas opções.
